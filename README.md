@@ -9,7 +9,7 @@
 
 > Creation of a `User` Superclass: *name, age, gender, experience variables and a winXp()* method;
 
-> Creation of a `Video`Subclass: inherits from **Video Actions**. It contains *title, review, views, likes, and isPlaying* variables;
+> Creation of a `Video` Subclass: inherits from **Video Actions**. It contains *title, review, views, likes, and isPlaying* variables;
 
 > Creation of a `Viewer` Subclass: inherits from **User**. It contains *login and total Watched* variables;
 
