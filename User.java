@@ -40,12 +40,8 @@ public abstract class User {
         return experience;
     }
 
-    public void setExperience(float experience) {
-        this.experience = experience;
-    }
-    
     public void winXp(){
-        this.experience+=5;
+        this.experience++;
     }
 
     @Override

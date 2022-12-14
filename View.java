@@ -6,17 +6,20 @@ public class View {
     public View(Viewer spectator, Video video) {
         this.spectator = spectator;
         this.videoWatched = video;
-        this.spectator.setTotWatched(this.spectator.getTotWatched()+1);
-        this.videoWatched.setViews(this.videoWatched.getViews()+1);
+        this.spectator.totWatched++;
+        this.videoWatched.views++;
         this.videoWatched.play();
+        this.spectator.winXp();
     }
 
     public void toRate(){
-        this.videoWatched.setReview(5);
+        this.videoWatched.review = 5;
+        this.spectator.winXp();
     }
     
     public void toRate(int rate){
-        this.videoWatched.setReview(rate);
+        this.videoWatched.review = rate;
+        this.spectator.winXp();
     }
     
     public void toRate(float percent){
@@ -30,24 +33,16 @@ public class View {
         } else {
             total = 10;
         }
-        this.videoWatched.setReview(total);
+        this.spectator.winXp();
+        this.videoWatched.review = total;
     }
-    
     
     public Viewer getSpectator() {
         return spectator;
     }
 
-    public void setSpectator(Viewer spectator) {
-        this.spectator = spectator;
-    }
-
     public Video getVideo() {
         return videoWatched;
-    }
-
-    public void setVideo(Video videoWatched) {
-        this.videoWatched = videoWatched;
     }
 
     @Override
